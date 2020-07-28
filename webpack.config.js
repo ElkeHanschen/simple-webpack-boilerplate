@@ -22,11 +22,12 @@ module.exports = {
             },
         ],
     },
+    devtool: 'inline-source-map', /* tracks js errors to source js, do NOT use for production */
+    devServer: {
+        contentBase: './dist',
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'bundle.js'
     },
-    devServer: {
-        port: 7700,
-    }
 };
