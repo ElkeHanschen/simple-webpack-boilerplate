@@ -9,11 +9,31 @@
 
 _When finished, this then also could serve as a starter boilerplate for my future projects_  
 
-## How to
+## How to - WIP, as this is not the way it should work, I suppose  
 - `npm run build`  
 - `npm run watch`  
 - `npm start`  
-- more to follow  
+- optimisation/fix to follow  
+
+## Packages - short explanation
+Of course find all of them on [npm](https://www.npmjs.com/package/npm) but to make it easier to follow my approach, a short explanation here:  
+
+#### webpack
+ToDo  
+#### webpack-cli
+ToDo  
+#### css-loader
+ToDo  
+#### mini-css-extract-plugin
+ToDo  
+#### sass-loader
+ToDo  
+#### style-loader
+ToDo  
+#### webpack-dev-server
+ToDo  
+#### inline-source-map
+ToDo  
 
 ## Sources
 [Webpack Getting Started](https://webpack.js.org/guides/getting-started/)  
