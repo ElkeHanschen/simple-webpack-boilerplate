@@ -10,10 +10,10 @@
 _When finished, this then also could serve as a starter boilerplate for my future projects_  
 
 ## How to - WIP, as this is not the way it should work, I suppose  
-- `npm run build`  
-- `npm run watch`  
-- `npm start`  
-- optimisation/fix to follow  
+- `npm run build` builds files for production - minified  
+- `npm run dev`  builds files for development - not minified  
+- `npm run start` serves on localhost but does not have js css  
+- this atm is confusing and needs to be fixed  
 
 ## Packages - short explanation
 Of course find all of them on [npm](https://www.npmjs.com/package/npm) but to make it easier to follow my approach, a short explanation here:  
