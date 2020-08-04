@@ -1,23 +1,16 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.js',
+    entry: './src/js/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'min.main.js'
+        filename: 'main.min.js'
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: 'style.css',
+            filename: 'style.min.css',
         }),
-        new HtmlWebpackPlugin({
-            inject: false,
-            hash: true,
-            template: './src/index.html',
-            filename: 'index.html'
-        })
     ],
     module: {
         rules: [
@@ -27,13 +20,19 @@ module.exports = {
                     'style-loader',
                     MiniCssExtractPlugin.loader,
                     'css-loader',
+                    'postcss-loader',
                     'sass-loader',
                 ],
             },
         ],
     },
-    devtool: 'inline-source-map', /* tracks js errors to source js, do NOT use for production */
+    watch: true,
+    watchOptions: {
+        ignored: /node_modules/,
+    },
     devServer: {
-        contentBase: './dist',
+        index: 'index.html',
+        liveReload: true,
+        port: 9000,
     },
 };

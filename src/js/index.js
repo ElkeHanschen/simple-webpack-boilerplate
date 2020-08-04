@@ -1,4 +1,4 @@
-import './style.scss';
+import '../scss/style.scss';
 import somefunctions from './somefunctions';
 
 somefunctions();
