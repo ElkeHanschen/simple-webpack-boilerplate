@@ -2,9 +2,11 @@
 
 ## ToDo
 - [ ] live reload not working since I moved the index.html and had some changes in dev-server config  
-- [ ] having watch running in the background  
 - [ ] to check, if autoprefixer works (when having more content)  
-- [ ] code review via Micha!  
+- [ ] code review  
+- [ ] **To Be Checked - url-loader**  
+    Resolves `url()` statements in (S)CSS.  
+    Converts resolved paths as BASE64 strings.  
 
 ## Preconditions  
 - only Front-End related  
@@ -31,6 +33,8 @@
 
 ## npm packages - short explanation
 Of course find all of them on [npm](https://www.npmjs.com/package/npm) but to make it easier to follow my approach, a short explanation here:  
+Please be careful when installing locally / globally!  
+Installing locally is what's being recommended.  
 
 #### webpack
 Module bundler for JavaScript applications.  
@@ -42,32 +46,51 @@ Flexible set of commands for DEVs to increase speed when setting up a custom web
 As of webpack v4, you also need to install -cli.  
 
 #### style-loader - use for Development
+`npm install --save-dev style-loader`  
+It’s recommended to combine style-loader with css-loader. 
 Injects CSS into the DOM. 
 It's faster than extracting the styles each time, like you do it with mini-css-extract-plugin.  
-It’s recommended to combine style-loader with css-loader. 
   
 #### mini-css-extract-plugin - use for Production
+`npm install --save-dev mini-css-extract-plugin`  
+It’s recommended to combine mini-css-extract-plugin with css-loader.  
 Extract CSS into separate files.  
 It creates a CSS file per JS file which contains CSS.  
-It’s recommended to combine mini-css-extract-plugin with css-loader.  
 
 #### css-loader
+`npm install --save-dev css-loader`  
 Interprets `@import` and `url()` like `import/require()` and will resolve them.  
 
-#### postcss-loader and autoprefixer
-Parse CSS and add vendor prefixes to CSS.  
+#### postcss-loader
+`npm install --save-dev postcss`  
+A mighty tool for transforming styles with JS plugins.  
+These plugins can lint your CSS, support variables and mixins, transpile future CSS syntax, inline images and more.  
+The Autoprefixer PostCSS plugin is one of the most popular.  
+
+#### Autoprefixer
+`npm install --save-dev autoprefixer`
+PostCSS plugin to parse CSS and add vendor prefixes to CSS.  
+
+#### sass
+`npm install --save-dev sass`  
+A pure JavaScript implementation of Sass.  
+Is a distribution of Dart Sass.  
 
 #### sass-loader
-Loads a Sass/SCSS file and compiles it to CSS.    
+`npm install sass-loader sass webpack --save-dev`  
+sass-loader requires you to install either Dart Sass or Node Sass.  
+It's recommended to install Dart Sass.
+Loads a Sass/SCSS file and compiles it to CSS.  
 
-#### webpack-dev-server  
-Use with a development server that provides live reloading.  
+#### webpack-dev-server
+`npm i webpack-dev-server`   
+A development server that provides live reloading.  
 This should be used for development only.  
 webpack-dev-server is configured by default to support live-reload of files as you edit your assets while the server is running.  
 
 ## Run commands
-- `npm run build` builds files for production - minified  
-- `npm start` serves on localhost 
+`npm start`  
+Combines `npm run build` (builds files for production - minified) and `npm start` (serves on localhost) 
 
 #### Trouble shooting
 - sometimes it's helpful to delete the dist folder and build files anew  
@@ -84,4 +107,5 @@ webpack-dev-server is configured by default to support live-reload of files as y
 
 [Article: How to configure webpack from scratch for a basic website](https://dev.to/pixelgoo/how-to-configure-webpack-from-scratch-for-a-basic-website-46a5)  
 [Article, super helpful: Why Webpack](https://blog.andrewray.me/webpack-when-to-use-and-why/)  
+[Article: 30 answers from Stack Overflow to the most popular webpack questions](https://medium.com/wizardnet972/30-answers-from-stack-overflow-to-the-most-popular-webpack-questions-49980770d5dc  )  
  

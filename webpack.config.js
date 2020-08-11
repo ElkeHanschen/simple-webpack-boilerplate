@@ -31,8 +31,10 @@ module.exports = {
         ignored: /node_modules/,
     },
     devServer: {
-        index: 'index.html',
+        contentBase: './',
+        watchContentBase: true,
         liveReload: true,
         port: 9000,
+        publicPath: '.dist/',
     },
 };
