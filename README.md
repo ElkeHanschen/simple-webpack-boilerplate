@@ -1,11 +1,11 @@
-# WIP - Simple Webpack v4 Boilerplate
+# Simple Webpack v4 Boilerplate
 
 ### What is this about?
 
 - take/create HTML, CSS, JavaScript files
 - minimize/distribute them into `dist` folder
 - automatically watch saved files on change
-- distribute on `localhost`; live reload on change
+- distribute on `localhost`
 - only use the utmost necessary packages
 - configure this from scratch
 
@@ -22,7 +22,8 @@
 
 - clone this repo
 - cd into project
-- `npm start` (combines `npm run build` (builds minified files for production) and `npm start` (serves on localhost)), will open the `index.html` on `localhost`
+- `npm install`
+- `npm start` (combines `npm run build` (builds minified files for production) and `npm start` (serves on localhost)), will open the `index.html` on `localhost:9000`
 
 ## Need to install node?
 
@@ -33,11 +34,6 @@
   - run this command in your terminal: `$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
   - install node via homebrew `brew install node`
   - check for node again `node -v`
-
-## ToDo
-
-- [ ] live reload not working since I moved the index.html and had some changes in dev-server config
-- [ ] to check, if autoprefixer works (when having more content)
 
 ## npm packages - short explanation
 
